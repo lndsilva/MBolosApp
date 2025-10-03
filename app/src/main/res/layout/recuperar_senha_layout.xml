@@ -10,10 +10,18 @@
     tools:context=".RecuperarSenhaActivity">
 
     <ImageView
+        android:id="@+id/imgVoltar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_arrow_back" />
+
+    <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo" />
@@ -24,7 +32,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="30sp"
         android:fontFamily="@font/bebasneueregular"
-        android:text="Meire Bolos"
+        android:text="Recuperar Usuário"
         android:textColor="#FD6242"
         android:textSize="45sp"
         android:textStyle="bold" />
@@ -48,46 +56,15 @@
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="5sp"
-        android:hint="Insira sua senha"
-        app:endIconMode="password_toggle"
-        app:startIconDrawable="@drawable/baseline_lock">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtSenha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:maxLength="12"
-
-            android:textSize="20sp" />
-    </com.google.android.material.textfield.TextInputLayout>
-
     <TextView
+        android:textAlignment="center"
+        android:textSize="16sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="5sp"
-        android:layout_marginBottom="10sp"
-        android:text="Esqueceu sua senha? Clique aqui." />
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="30sp"
+        android:text="Clicando em recuperar você receberá um e-mail com link para atualizar sua senha." />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnEntrar"
-        style="@style/Widget.Material3.Button.IconButton.Outlined"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
-        android:layout_marginBottom="20sp"
-        android:padding="15sp"
-        android:text="Entrar"
-        android:textAllCaps="true"
-        android:textColor="#FD6242"
-        android:textSize="20sp"
-        app:cornerRadius="5dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCadastrar"
@@ -95,7 +72,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#F44336"
         android:padding="15sp"
-        android:text="Cadastrar"
+        android:text="Recuperar"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
