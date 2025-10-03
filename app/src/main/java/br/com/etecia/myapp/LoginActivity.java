@@ -3,6 +3,7 @@ package br.com.etecia.myapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -17,6 +18,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class LoginActivity extends AppCompatActivity {
     TextInputEditText txtEmail, txtSenha;
     MaterialButton btnEntrar;
+    TextView txtEsqueceuSenha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,16 @@ public class LoginActivity extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmail);
         txtSenha = findViewById(R.id.txtSenha);
         btnEntrar = findViewById(R.id.btnEntrar);
+
+        txtEsqueceuSenha = findViewById(R.id.txtEsqueceuSenha);
+
+        txtEsqueceuSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),RecuperarSenhaActivity.class));
+                finish();
+            }
+        });
 
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
